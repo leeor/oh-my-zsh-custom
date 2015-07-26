@@ -35,12 +35,17 @@ bindkey ^E vi-end-of-line
 bindkey "OH" vi-beginning-of-line
 bindkey "OF" vi-end-of-line
 bindkey "[3~" vi-delete-char
-bindkey "OA" up-line-or-search
-bindkey "OB" down-line-or-search
 bindkey "^I" expand-or-complete-with-dots
 bindkey -M vicmd / vi-history-search-backward
 bindkey -M vicmd n vi-repeat-search
 bindkey -M vicmd N vi-rev-repeat-search
+
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "^[[A" up-line-or-beginning-search
+bindkey "^[[B" down-line-or-beginning-search
 
 # allow v to edit the command line (standard behaviour)
 #autoload -Uz edit-command-line

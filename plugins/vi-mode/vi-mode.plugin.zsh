@@ -47,6 +47,8 @@ zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search
 bindkey "^[[B" down-line-or-beginning-search
 
+bindkey "^T" transpose-chars
+
 # allow v to edit the command line (standard behaviour)
 #autoload -Uz edit-command-line
 #bindkey -M vicmd 'v' edit-command-line

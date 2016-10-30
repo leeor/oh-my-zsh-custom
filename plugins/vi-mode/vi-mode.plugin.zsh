@@ -35,7 +35,7 @@ bindkey ^E vi-end-of-line
 bindkey "OH" vi-beginning-of-line
 bindkey "OF" vi-end-of-line
 bindkey "[3~" vi-delete-char
-bindkey "^I" expand-or-complete-with-dots
+bindkey "^I" expand-or-complete
 bindkey -M vicmd / vi-history-search-backward
 bindkey -M vicmd n vi-repeat-search
 bindkey -M vicmd N vi-rev-repeat-search
